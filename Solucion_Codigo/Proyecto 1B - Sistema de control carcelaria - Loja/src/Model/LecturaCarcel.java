@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 public class LecturaCarcel {
+    
     public Carcel carcel;
     
     public void leerArchivo(String nombreArchivo){
@@ -14,8 +15,7 @@ public class LecturaCarcel {
         } catch (IOException | ClassNotFoundException e) {
             System.out.println(e);
         }
-    }
-    
+    }   
     public Carcel getCarcel() {
         return carcel;
     }

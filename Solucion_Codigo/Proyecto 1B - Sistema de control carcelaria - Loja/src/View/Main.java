@@ -1,8 +1,6 @@
 package View;
 import Controller.*;
 import Model.*;
-import java.io.*;
-import java.util.*;
 import java.util.Scanner;
 public class Main {
     
@@ -11,9 +9,7 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
         LecturaCarcel lectCarcel = new LecturaCarcel();
         lectCarcel.leerArchivo(nombreArchivoPPL); 
-
         Carcel carcel = lectCarcel.getCarcel();
-        //System.out.println(carcel);
         while(true){
             System.out.println("==================================================");
             System.out.println("                       MENU");
