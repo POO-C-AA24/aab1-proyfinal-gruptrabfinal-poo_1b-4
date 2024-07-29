@@ -1,21 +1,22 @@
 package Controller;
 public abstract class PPL {
     
-    private String nombre;
-    private String apellido;
-    private int edad;
-    private String genero;
-    private String nacionalidad;
-    private String fechaIngreso;
-    private int pena;
-    private String conducta;
-    private String castigo;
-    private String actividad;
-    private String rehabilitacion;
-    private Delito delito;
-    private int id_Delito;
+    public String nombre;
+    public String apellido;
+    public int edad;
+    public String genero;
+    public String nacionalidad;
+    public String fechaIngreso;
+    public int pena;
+    public String conducta;
+    public String castigo;
+    public String actividad;
+    public String rehabilitacion;
+    public String alertaFuga;
+    public Delito delito;
+    public int id_Delito;
 
-    public PPL(String nombre, String apellido, int edad, String genero, String nacionalidad, String fechaIngreso, int pena, String castigo, String actividad, String rehabilitacion, Delito delito, int id_Delito) {
+    public PPL(String nombre, String apellido, int edad, String genero, String nacionalidad, String fechaIngreso, int pena, String conducta, String castigo, String actividad, String rehabilitacion, String alertaFuga, int id_Delito) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -23,81 +24,24 @@ public abstract class PPL {
         this.nacionalidad = nacionalidad;
         this.fechaIngreso = fechaIngreso;
         this.pena = pena;
+        this.conducta = conducta;
         this.castigo = castigo;
         this.actividad = actividad;
         this.rehabilitacion = rehabilitacion;
-        this.delito = delito;
+        this.alertaFuga = alertaFuga;
         this.id_Delito = id_Delito;
     }
 
-    public String getNombre() {
-        return nombre;
+    public void setDelito(Delito delito) {
+        this.delito = delito;
     }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public String getNacionalidad() {
-        return nacionalidad;
-    }
-
-    public String getFechaIngreso() {
-        return fechaIngreso;
-    }
-
-    public int getPena() {
-        return pena;
-    }
-
-    public String getConducta() {
-        return conducta;
-    }
-
-    public String getCastigo() {
-        return castigo;
-    }
-
-    public String getActividad() {
-        return actividad;
-    }
-
-    public String getRehabilitacion() {
-        return rehabilitacion;
-    }
-
-    public Delito getDelito() {
-        return delito;
-    }
-
-    public int getId_Delito() {
-        return id_Delito;
-    }
-    
-    
-    
     
     public void aumentarPena(int aumentoPena) { 
         
     }
     
-    public void asignarCastigo() {      //Metodo polimorfico
-        
-    }
+    abstract public void asignarCastigo(int arg);
+    abstract public void asignarActividad(int arg);
+    abstract public void asignarRehabilitacion (int arg);
     
-    public void asignarActividad() {     //Metodo polimorfico
-        
-    }
-    
-    public void asignarRehilitacion () {  //Metodo polimorfico
-        
-    }
 }

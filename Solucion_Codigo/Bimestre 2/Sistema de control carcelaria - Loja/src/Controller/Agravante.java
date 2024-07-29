@@ -1,13 +1,13 @@
 package Controller;
 public class Agravante {
     
-    private String nombre;
-    private String estado;
-    private String descripcion;
-    private int id_Agravante;
+    public String nombreAgravante;
+    public String estado;
+    public String descripcion;
+    public int id_Agravante;
 
-    public Agravante(String nombre, String estado, String descripcion, int id_Agravante) {
-        this.nombre = nombre;
+    public Agravante(String nombreAgravante, String estado, String descripcion, int id_Agravante) {
+        this.nombreAgravante = nombreAgravante;
         this.estado = estado;
         this.descripcion = descripcion;
         this.id_Agravante = id_Agravante;
